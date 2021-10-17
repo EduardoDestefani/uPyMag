@@ -4,7 +4,7 @@
 
 Usa **modo de operação contínua dos sensores**, sem deepsleep, com monitoramento dos dados com centenas de leituras por segundo, para serem analisadas via processamento de sinais com [ulab](https://github.com/v923z/micropython-ulab#ulab).
 
-### Para uPyGeoMag:
+### uPyGeoMag:
 Escolher placa ADC de 16 a 24 bits:
 
 - [ADS1115](https://www.ti.com/product/ADS1115) (16 bits, I2C);
@@ -14,7 +14,7 @@ Escolher placa ADC de 16 a 24 bits:
 
 Pretende-se contruir placa de circuito impresso com os componentes soldados, filtros de sinais RC, alimentação da parte analógica separada, com pequeno comprimento dos fios e terminais, tudo para minimizar ruído no sinal analógico lido do FLC100.
 
-### Para uPyMagSig:
+### uPyMagSig:
 Uso de ADC **interno** 12bits do Pyboard-D SF2W: pretende-se contruir placa de circuito impresso com os componentes soldados, filtros de sinais RC, alimentação da parte analógica separada, com pequeno comprimento dos fios e terminais, tudo para minimizar ruído no sinal analógico lido do FLC100.
 
 **Opções**:
@@ -79,4 +79,4 @@ Quando o aparelho é ligado:
 <img src="img/aplication-on.jpg" width="300" height="300" />
 
 
-**Equipe**: Eduardo Destefani Stefanato (principal), Pedro Henrique Robadel da Silva Camâra, Roberto Colistete Júnior.
+**Equipe**: Eduardo Destefani Stefanato, Pedro Henrique Robadel da Silva Camâra, Roberto Colistete Júnior.
