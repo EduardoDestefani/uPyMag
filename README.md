@@ -40,7 +40,7 @@ As leituras de alta frequência (várias leituras do ADC por segundo), são most
 
 O tela de LEDs do TILE-LED36 se preenche de acordo com a intensidade de fluxo magnético na direção em que o FLC100 está apontando. Cada LED corresponde a 10uT (isso pode ser editado no código-fonte). Caso o campo tenha orientação negativa, os LEDs brilham em azul, caso a orientação seja positiva, os LEDs brilham em vermelho. 
 
-#### Hardware
+### Hardware
 
 O hardware do uPyMagSig é composto por:
 
@@ -54,29 +54,13 @@ Opcional, presente nas versões mais atuais (>= V0.6):
 - [TILE-LED36](https://pybd.io/hw/tile_led36.html#code-samples);
 - [WBUS-DIP68](https://pybd.io/hw/wbus_dip68.html).
 
-<img src="https://gitlab.com/rcolistete/computacaofisica-privado/-/blob/master/LabNerdsIoT_Vitoria/projeto9/Pyboard-D%20SF2W/img/pre-prototipo.jpg" width="300" height="300" />
+### Dashboard & Aplicação
+O dashboard escolhido (Interface IoT) foi o do [Cayenne](https://cayenne.mydevices.com/cayenne/dashboard/device/c83cf2c0-a811-11eb-883c-638d8ce4c23d), pois possui uma interface mais rica em recursos. Porém, o tipo de grandeza dos dados que usamos é Tesla, grandeza ainda não suportada pelo Cayenne, vide [documentação](https://developers.mydevices.com/cayenne/docs/cayenne-mqtt-api/#magnetometer-widget). Logo, usamos os espaços editaveis para mostrar a escala e grandezas que trabalhamos. 
 
-#### Dashboard
-O dashboard escolhido (Interface IoT) foi o do [Cayenne](https://cayenne.mydevices.com/cayenne/dashboard/device/c83cf2c0-a811-11eb-883c-638d8ce4c23d), pois possui uma interface mais rica em recursos. Porém, o tipo de grandeza dos dados que usamos é Tesla, grandeza ainda não suportada pelo Cayenne, vide [documentação](https://developers.mydevices.com/cayenne/docs/cayenne-mqtt-api/#magnetometer-widget). Logo, usamos os espaços editaveis para mostrar a escala e grandezas que trabalhamos.
+A aplicação do pré-protótipo é simples, pois exige apenas da instalação física do pré-protótipo perto do aparelho eletromagnético desejado. Desse modo, podemos ver como o equipamento se comporta, se emite ou não um campo magnético quando ligado e/ou desligado, e se apresenta variações durante seu funcionamento. Tais dados são enviados para a núvem e são gravados na memória do MCU. Por exemplo, podemos ver um pequeno desnível no gráfico causado pelo funcionamento do microondas:
 
-<img src="https://gitlab.com/rcolistete/computacaofisica-privado/-/blob/master/LabNerdsIoT_Vitoria/projeto9/Pyboard-D%20SF2W/img/dashboard.png" width="300" height="300" />
+<img src="img/dashboardon_aplication-on.png" width="300" height="300" />
 
-#### Aplicação
-A aplicação do pré-protótipo é simples, pois exige apenas da instalação física do pré-protótipo perto do aparelho eletromagnético desejado. Desse modo, podemos ver como o equipamento se comporta, se emite ou não um campo magnético quando ligado e/ou desligado, e se apresenta variações durante seu funcionamento. Tais dados são enviados para a núvem e são gravados na memória do MCU.
-
-Por exemplo, podemos ver um pequeno desnível no gráfico causado pelo funcionamento do microondas:
-
-<img src="img/dashboardon.png" width="300" height="300" />
-
-Os dados que o IoT Cloud recebe são as médias da lista de amostragem calculadas a cada 3 segundos. Isso porque o envio dos dados possui um delay consideravel. Logo, para exibir variações do campo com frequências mais altas, usamos a pequena tela de LED's para tal.  
-
-Por exemplo, a intensidade do campo é mostrada de acordo com o preenchimento da tela de 36 LED's (LED's vermelhos para intensidades positivas e azul para negativas):
-
-<img src="img/aplication-off.jpg" width="300" height="300" />
-
-Quando o aparelho é ligado:
-
-<img src="img/aplication-on.jpg" width="300" height="300" />
-
+Os dados que o IoT Cloud recebe são as médias da lista de amostragem calculadas a cada 3 segundos. Isso porque o envio dos dados possui um delay considerável. Logo, para exibir variações do campo com frequências mais altas, usamos a pequena tela de LED's para tal. Por exemplo, a intensidade do campo é mostrada de acordo com o preenchimento da tela de 36 LED's (LED's vermelhos para intensidades positivas e azul para negativas).
 
 **Equipe**: Eduardo Destefani Stefanato, Pedro Henrique Robadel da Silva Camâra, Roberto Colistete Júnior.
