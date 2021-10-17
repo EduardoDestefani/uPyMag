@@ -28,7 +28,7 @@ Uso de ADC **interno** 12bits do Pyboard-D SF2W: pretende-se contruir placa de c
 - só 1x, pois o FLC100 é caro (EUR60-80) e há poucos disponíveis (precisa de 1-2 p/ desenvolvimento);
 - 1x no datacenter ou na sala de entrada ou sala de trabalho, onde há mais equipamentos eletrônicos/mecânicos ligados.
 
-### [uPyMagSig] software para captar assinaturas magnéticas e envio para IoT Cloud
+### uPyMagSig software para captar assinaturas magnéticas e envio para IoT Cloud
 
 Como uma opção de pré-protótipo, foi elaborado uma versão do uPyMagSig para Pyboard's, com envios de dados para nuvem. A versão mais recente grava os dados de campo e tempo em um arquivo `.csv` para aplicar outras análises gráficas em Python3. Vide software de análise gráfica desenvolvido.
 
