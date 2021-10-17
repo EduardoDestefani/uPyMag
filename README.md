@@ -59,7 +59,7 @@ O dashboard escolhido (Interface IoT) foi o do [Cayenne](https://cayenne.mydevic
 
 A aplicação do pré-protótipo é simples, pois exige apenas da instalação física do pré-protótipo perto do aparelho eletromagnético desejado. Desse modo, podemos ver como o equipamento se comporta, se emite ou não um campo magnético quando ligado e/ou desligado, e se apresenta variações durante seu funcionamento. Tais dados são enviados para a núvem e são gravados na memória do MCU. Por exemplo, podemos ver um pequeno desnível no gráfico causado pelo funcionamento do microondas:
 
-<img src="img/dashboardon_aplication-on.png" width="300" height="300" />
+<img src="img/dashboardon_aplication-on.png" width="600"/>
 
 Os dados que o IoT Cloud recebe são as médias da lista de amostragem calculadas a cada 3 segundos. Isso porque o envio dos dados possui um delay considerável. Logo, para exibir variações do campo com frequências mais altas, usamos a pequena tela de LED's para tal. Por exemplo, a intensidade do campo é mostrada de acordo com o preenchimento da tela de 36 LED's (LED's vermelhos para intensidades positivas e azul para negativas).
 
